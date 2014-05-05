@@ -10,13 +10,17 @@ public class RetirementCalculator extends JFrame
 	
 	public static void main(String[]args)
 	{
+		
+		GraphicEntry gPanel = new GraphicEntry();
+		
 		JFrame frame = new JFrame("Tyler's Retirement Calculator");
 		frame.setVisible(true);
-		frame.setSize(frameWidth, frameHeight);
-		frame.setExtendedState(MAXIMIZED_BOTH);
-		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		//frame.setSize(frameWidth, frameHeight);
+		//frame.setExtendedState(MAXIMIZED_BOTH);
+		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);	
+		frame.add(DataEntry.createGUI(), BorderLayout.NORTH);
+		frame.add(gPanel, BorderLayout.CENTER);
 		frame.pack();
-		frame.setContentPane(DataEntry.CreateGUI());
 		
 	}
 }
